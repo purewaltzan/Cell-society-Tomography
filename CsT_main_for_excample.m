@@ -1,7 +1,5 @@
-function [outputArg1,outputArg2] = CsT_main(CsT_import)
-%CST_MAIN 此处显示有关此函数的摘要
-%   此处显示详细说明
-CsTc = CsT_InitialCsTc(filename,species);
+%CsT_main_for_excample This is the transcripts of CsT analysis of exmple data.
+CsTc = CsT_InitialCsTc('example.csv','Mus'); %Initialize paramaters of CsT. Filename and spacies name must be given in this processes to further analysis.
 CsTc = CsT_dataimport(CsTc);
 CsTc = CsT_Readannotation(CsTc);
 CsTc.par.annotation.geneselect.transcripttype=CsTc.par.annotation.geneselect.transcripttype(31);
@@ -17,7 +15,7 @@ CsTc = CsT_Interslicedistence(CsTc);
 CsTc.par.slice.display.dimension=2;
 CsTc = CsT_Reducedim(CsTc);
 CsTc = CsT_Clusterlayer(CsTc);
-CsT_Showgene(CsTc) %%机器学习
+CsT_Showgene(CsTc) %%鏈哄櫒瀛︿範
 CsTc.par.display.markernum=10;
 CM = CsT_InitialCC
 CsTc = CsT_Cellcluster(CsTc,slice,CM);
@@ -29,5 +27,3 @@ CsTc.par.graph.minlinkage=0.5
 CsTc.par.graph.degree=[10,3]
 CsTc.par.graph.outputname='graph'
 CsTc = CsT_Graph(CsTc)
-end
-
