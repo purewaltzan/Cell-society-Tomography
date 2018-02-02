@@ -1,6 +1,6 @@
 function we = CsT_Deletefields1(CsTc);
-%CST_DELETEFIELDS1 此处显示有关此函数的摘要
-%   此处显示详细说明
+%CST_DELETEFIELDS1 姝ゅ鏄剧ず鏈夊叧姝ゅ嚱鏁扮殑鎽樿
+%   姝ゅ鏄剧ず璇︾粏璇存槑
 we = CsTc.main.n;
 we.par=CsTc.par;
 we.par.slice.step=1;
@@ -17,6 +17,5 @@ we.par.slice.display.perplex=20;
 we.par.display.dimension=3;
 we.par.display.pvalue=0.05;
 we.par.display.markernumbuer=5;
-
 end
 
