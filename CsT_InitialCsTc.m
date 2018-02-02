@@ -1,8 +1,8 @@
 function CsTc = CsT_InitialCsTc(filename,species)
-%CST_INITIALCSTC 此处显示有关此函数的摘要
-%   此处显示详细说明
+%CST_INITIALCSTC Initialize the paramaters of CsT
+%   CsTc = CsT_InitialCsTc(filename,species) returns a struct 
 CsTc.filename=filename;
-CsTc.splittype=[];%这里需要读取参数的句柄%
+CsTc.splittype=[];%杩欓噷闇�瑕佽鍙栧弬鏁扮殑鍙ユ焺%
 CsTc.par.annotation.species=species;
 CsTc.par.annotation.DoGeneselect=1;
 CsTc.par.annotation.Uniontype='Gene'
