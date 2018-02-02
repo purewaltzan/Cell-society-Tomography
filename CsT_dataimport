@@ -1,0 +1,14 @@
+function CsTc = CsT_dataimport(CsTc)
+%CST_IMPORT 此处显示有关此函数的摘要
+%   此处显示详细说明
+D = importdata(CsTc.filename,'\v');
+ad=regexp(CsTc.filename,'\.','split');
+if isempty(CsTc.splittype)
+switch ad{end}
+case 'csv'
+CsTc.splittype = ',';
+case {'xlsx','xls','tsv','txt'}
+CsTc.splittype = '\t';
+otherwise
+error('CsT only support .csv, Excel, .txt formation or any files which was given vertical and horizantal split charactors');
+end
