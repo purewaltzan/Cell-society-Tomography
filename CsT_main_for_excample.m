@@ -15,7 +15,7 @@ CsTc = CsT_Interslicedistence(CsTc);
 CsTc.par.slice.display.dimension=2;
 CsTc = CsT_Reducedim(CsTc);
 CsTc = CsT_Clusterlayer(CsTc);
-CsT_Showgene(CsTc) %%机器学习
+CsT_Showgene(CsTc,'Acan');
 CsTc.par.display.markernum=10;
 CM = CsT_InitialCC
 CsTc = CsT_Cellcluster(CsTc,slice,CM);
