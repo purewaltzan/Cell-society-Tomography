@@ -1,5 +1,6 @@
 # Cell society Tomography v1.0
 26th,Jan,2018 by An Chengrui in Zhejiang University
+(c) An Chengrui, Zhejiang University, Hangzhou, China
 
 1 Introduction and requirement
 1.1 Introduction
@@ -13,6 +14,9 @@ Because it needs lots of calculation, a server or workstation with CPUs with mor
 1:single cell RNA-seq or any other high-dimensional data fitting Poisson's distribution
 2:the feature number of samples fit to normal distribution
 3:Deep sequencing (average feature number is more than 4000)
+
+1.4 Package installation
+Download all files in https://github.com/purewaltzan/Cell-society-Tomography/. Set path to this folder in MATLAB
 
 2 User guide
 2.1 Data prepareretion
@@ -28,4 +32,17 @@ genename2,data2.1,data2.2,...
 
 Where block of 'gene' is very important for CsT to seperate labels and data. No capital here. Tabel also can starte with 'gene' if there is no labels for every cells.
 
-2.2 Peremeter intiation
+2.2 Peremater intiation
+
+N Perematers
+CsTc.filename: full name of filename of table of gene expression. (Required)
+CsTc.splittype: charactors for split cells. (Default: ',' for .csv, tab for .tsv, .xls and .xlsx)
+CsTc.par.annotation.species: fragment source. (Required)
+CsTc.par.annotation.DoGeneselect: (Defualt: 1)
+CsTc.par.annotation.Uniontype: (Defualt: 'Gene')
+CsTc.data: expression data matrix;
+CsTc.gene: gene list;
+CsTc.Cellid: name of samples;
+CsTc.label: biologic label of samples;
+CsTc.labelname: name of biologic label;
+CsTc.par.Normalize.maxcounts: gate 
