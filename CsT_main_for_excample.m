@@ -12,7 +12,7 @@ CsTc = CsT_Deletefields1(CsTc);
 CsTc = CsT_Slicetsnetransform(CsTc);
 CsTc = CsT_Innerslicedistence(CsTc);
 CsTc = CsT_Interslicedistence(CsTc);
-CsTc.par.slice.display.dimension=2;
+CsTc.par.slice.display.dimension=3;
 CsTc = CsT_Reducedim(CsTc);
 CsTc = CsT_Clusterlayer(CsTc);
 CsT_Showgene(CsTc,'Acan');
